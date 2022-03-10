@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>Team Yoshi</title>
     <link rel="stylesheet" href="/css/main.css">
-    
-<div id="large-header" class="large-header">
-  <canvas id="demo-canvas"></canvas>
-    <h1 class="main-title">Team <span class="thin">Yoshi</span></h1>
-</div>
   </head>
   <body>
-	<script src="/JS/main.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-	<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
-        <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
-        <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+.main-content
+
+	.concept.concept-eight
+		h1.word
+			each val, index in ['S','K','E','E','T']
+				div.char(data-content=val)= val
+
+footer
+
+	a(href="https://github.com/bashpink" target="_blank")
+		i.icon-social-github.icons
+
   </body>
 </html>

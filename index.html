@@ -6,21 +6,258 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>Team Yoshi</title>
     <link rel="stylesheet" href="/css/main.css">
+    
     <style>
 body {
-  background-image: url("/css/paper.jpg");
-  background-color: #cccccc;
+  background-color: #000000;
+}
+
+.menu_wheel {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 70%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f00,
+    inset -20px 0 80px #00f,
+    inset 20px 0 300px #f00,
+    inset -20px 0 300px #00f,
+    0 0 50px #fff,
+    -10px 0 80px #f00,
+    10px 0 80px #00f;
+}
+
+h1 {
+  text-align: center;
+  color: #ddd;
+  text-shadow:  0 0 10px #fff,
+                0 0 30px #00f,
+                0 0 50px #000;
+  font-family: Verdana,Sans-Serif;
+  font-size: 45px;
+}
+
+.about {
+  text-align: center;
+  color: #eee;
+  text-shadow:  0 0 10px #fff,
+                0 0 30px #f00,
+                0 0 50px #000;
+  font-family: Verdana,Sans-Serif;
+  font-size: 22px;
+  position: absolute;
+  left: -35px;
+  top: 150px;
+  transition: transform .5s;
+}
+
+.about:hover {
+  transform: scale(1.5);
+}
+
+.members {
+  text-align: center;
+  color: #eee;
+  text-shadow:  0 0 10px #fff,
+                0 0 30px #00f,
+                0 0 50px #000;
+  font-family: Verdana,Sans-Serif;
+  font-size: 22px;
+  position: absolute;
+  left: 260px;
+  top: 140px;
+  transition: transform .5s;
+}
+
+.members:hover {
+  transform: scale(1.5);
+}
+
+.memes {
+  text-align: center;
+  color: #eee;
+  text-shadow:  0 0 10px #fff,
+                0 0 30px #f0f,
+                0 0 50px #000;
+  font-family: Verdana,Sans-Serif;
+  font-size: 22px;
+  position: absolute;
+  left: 110px;
+  top: 280px;
+  transition: transform .5s;
+}
+
+.memes:hover {
+  transform: scale(1.5);
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 100px;
+  top: 98px;
+  background-color: #bbb;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f00,
+    inset -20px 0 80px #00f,
+    inset 20px 0 300px #f00,
+    inset -20px 0 300px #00f,
+    0 0 50px #fff,
+    -10px 0 80px #f00,
+    10px 0 80px #00f;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+
+}
+
+.cirlce:onclick {
+  transform: translate(200px,200px);
+}
+
+.header {
+  background-color: rgba(94, 2, 86, 0.329);
+  box-shadow: #e60074 0px 0px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 50px;
+}
+
+.timer_button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  left: 5%;
+  top: -95px;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0081;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.timer_button:focus {
+  outline: 0;
+}
+.timer_button:before, .timer_button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.timer_button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.timer_button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.timer_button:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+
+
+.mute_button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  left: 9%;
+  top: -95px;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ff0081;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.mute_button:focus {
+  outline: 0;
+}
+.mute_button:before, .mute_button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.mute_button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.mute_button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.mute_button:active {
+  transform: scale(0.9);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.lofi {
+  position: absolute;
+  top: 50px;
+  left: 75%; 
 }
     </style>
   </head>
-  <body>
-    <
-      <div>
-  <h1>Team Yoshi</h1>
-  <a href="notices.html" class="about">Notices</a>
-  <a href="team.html" class="members">The Team</a>
-  <a href="memes.html" class="memes">Memes</a>
-  <a href="https://github.com/bashpink" title="This button links to Aaron's source code for the site." class="circle"></a>   
-      </div>
+        <body>
+        <div class="header">
+           <button class="timer_button">Break Timer</button>
+           <button class="mute_button">Mute</button>
+        </div>
+        <div class="menu_wheel">
+           <h1>Team Yoshi</h1>
+           <a href="notices.html" class="about">Notices</a>
+           <a href="team.html" class="members">The Team</a>
+           <a href="memes.html" class="memes">Memes</a>
+           <a href="https://github.com/bashpink" title="This button links to Aaron's source code for the site." class="circle"></a>   
+        </div>
+        <iframe class="lofi" width="210" height="150" src="https://www.youtube.com/embed/n61ULEU7CO0">
+        </iframe>
     </body>
 </html>

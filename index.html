@@ -31,13 +31,7 @@
               background: linear-gradient(60deg, rgb(82, 0, 71) 0%, rgb(19, 0, 193) 100%);
               color:white;
             }
-            .logo {
-              width:50px;
-              fill:white;
-              padding-right:15px;
-              display:inline-block;
-              vertical-align: middle;
-            }
+
             
             .inner-header {
               height:65vh;
@@ -111,11 +105,42 @@
                 font-size:30px;
               }
             }
+
+            #myBtn {
+                width: 200px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #000;
+                color: #fff;
+                cursor: pointer;
+              }
+              
+              #myBtn:hover {
+                background: #ddd;
+                color: black;
+              }
         </style>  
 </head>
   <body>
+      <script>
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("myBtn");
+            
+            function myFunction() {
+              if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+              } else {
+                video.pause();
+                btn.innerHTML = "Play";
+              }
+            
+            </script>
+      <div class="mood">
+
+      </div>
       <div class="header">
-        <h2>Team Yoshi</h2>
         <div class="inner-header flex">
             <h1>Be Limitless</h1>
             </div>
@@ -139,7 +164,7 @@
             
             </div>
             <div class="content flex">
-                <p></p>
+                <button id="myBtn" onclick="myFunction()">Pause</button>
               </div>
   </body>
 </html>

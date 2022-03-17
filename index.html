@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>Team Yoshi</title>
-    <link rel="stylesheet" href="/css/main.css">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <style>
 body {
   background-color: #000000;
+  margin: 5%;
 }
+
 
 .menu_wheel {
   position: absolute;
@@ -122,137 +124,77 @@ h1 {
   transform: translate(200px,200px);
 }
 
-.header {
-  background-color: rgba(94, 2, 86, 0.329);
-  box-shadow: #e60074 0px 0px 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 70px;
-}
-
-.timer_button {
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  display: inline-block;
-  left: 5%;
-  top: -95px;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #ff0081;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
-}
-.timer_button:focus {
-  outline: 0;
-}
-.timer_button:before, .timer_button:after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-.timer_button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-}
-.timer_button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-.timer_button:active {
-  transform: scale(0.9);
-  background-color: #e60074;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
-
-
-
-.mute_button {
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  display: inline-block;
-  left: 9%;
-  top: -95px;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #ff0081;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
-}
-.mute_button:focus {
-  outline: 0;
-}
-.mute_button:before, .mute_button:after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-.mute_button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-}
-.mute_button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-.mute_button:active {
-  transform: scale(0.9);
-  background-color: #e60074;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
 .lofi {
   position: absolute;
   top: 50px;
   left: 75%; 
 }
+
+.timer {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 24px 32px;
+  border-radius: 30px;
+  background: #fff;
+}
+
+.timer__part{
+  font-size: 36px;
+  text-color: #000;
+  font-weight: bold;
+}
+
+.timer__btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer__btn--start {
+  background: #00b84c;
+}
+
+.timer__btn--stop {
+  background: #ff0256;
+}
     </style>
+
   </head>
         <body>
-        <div class="header">
-           <button class="timer_button">Break Timer</button>
-           <button class="mute_button">Mute</button>
+        <div class="timer">
+          <span class="timer__part timer__part--minutes">00</span>
+          <span class="timer__part">:</span>
+          <span class="timer__part timer__part--seconds">00</span>
+          <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+            <span class="material-icons">play_arrow</span>
+          <button type="button" class="timer__btn timer__btn--control timer__btn--reset">
+              <span class="material-icons">timer</span>
         </div>
+
         <div class="menu_wheel">
            <h1>Team Yoshi</h1>
            <a href="notices.html" class="about">Notices</a>
+           <a href="team.html" class="members">The Team</a>
+           <a href="memes.html" class="memes">Memes</a>
+           <a href="https://github.com/bashpink" title="This button links to Aaron's source code for the site." class="circle"></a>   
+        </div>
+
+        <div class="lofi_div">
+          <p style="position:absolute; left: 75%; top: 10px;">Pick your mood:</p>
+          <p style="position:absolute; left: 75%; top: 30px; font-weight:bolder;I ">Lofi
+          <iframe class="lofi" width="210" height="150" src="https://www.youtube.com/embed/n61ULEU7CO0&autoplay=1" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+
+      </body>
+</html>
            <a href="team.html" class="members">The Team</a>
            <a href="memes.html" class="memes">Memes</a>
            <a href="https://github.com/bashpink" title="This button links to Aaron's source code for the site." class="circle"></a>   

@@ -108,34 +108,44 @@
               }
             }
 
-            #btn {
-                width: 200px;
-                font-size: 18px;
-                padding: 10px;
-                border: none;
-                background: #000;
-                color: #fff;
-                cursor: pointer;
-              }
-              
-              #btn:hover {
-                background: #ddd;
-                color: black;
-              }
-
               .lofi {
                 position: absolute;
-                left: 85%;
-                top: 20px;
-
+                left: 75%;
+                top: 90px;
+             
               }
+              .lofi_text {
+                position: absolute;
+                left: 77%;
+                top: 80px;
+                font-weight: bold;
+                color:rgb(0, 247, 255);
+                font-size: 16px;
+              }
+
+              .native {
+                position: absolute;
+                left: 75%;
+                top: 300px;
+              }
+
+              .native_text {
+                position: absolute;
+                left: 77%;
+                top: 290px;
+                font-weight: bold;
+                color:rgb(0, 247, 255);
+                font-size: 16px;
+              }
+
         </style>  
 </head>
   <body>
-
       <div class="header">
         <div class="inner-header flex">
             <h1>Be Limitless</h1>
+            <a class="lofi_text">Lofi</a>
+            <a class="native_text">Native</a>
         </div>
             
             <!--Waves Container-->
@@ -156,9 +166,13 @@
             <!--Waves end-->
     
             </div>
+          
             <!--Video Containers-->
             <div class="lofi">
-              <iframe width="310" height="150" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/5qap5aO4i9A?controls=1"></iframe>
+              <iframe width="310" height="150" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/5qap5aO4i9A?start=&controls=1"></iframe>
+            </div>
+            <div class="native">
+              <iframe width="310" height="150" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube.com/embed/c5Sy-tODTJU?start=&controls=1"></iframe>
             </div>
         <!---Footer Container-->
         <div class="content flex">

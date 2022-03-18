@@ -18,8 +18,9 @@
             h1 {
               font-family: 'Lato', sans-serif;
               font-weight: bolder;
-              letter-spacing: 10px;
+              letter-spacing: 12px;
               font-size:60px;
+
             }
             p {
               font-family: 'Lato', sans-serif;
@@ -106,6 +107,37 @@
               h1 {
                 font-size:30px;
               }
+            
+
+              .limit_text {
+                position: absolute;
+                left: 1%;
+                top: 10px;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 12px;
+                font-weight: bolder;
+                color:rgb(236, 140, 255);
+                font-size: 40px;
+                text-shadow: 0 0 10px rgb(216, 32, 253);
+              }
+
+              .TY {
+                position: absolute;
+                left: 5%;
+                top: 50px;
+                font-weight: bold;
+                color:rgb(0, 247, 255);
+              font-size: 20px;
+                text-shadow: 0 0 20px rgb(0, 247, 255);
+              }
+
+            .mood_text {
+              position: absolute;
+              left: 80%;
+              top: 55px;
+              font-weight: bold;
+              color:rgb(0, 247, 255);
+              font-size: 12px;
             }
 
               .lofi {
@@ -137,13 +169,15 @@
                 color:rgb(0, 247, 255);
                 font-size: 16px;
               }
-
+            }
         </style>  
 </head>
   <body>
       <div class="header">
         <div class="inner-header flex">
-            <h1>Be Limitless</h1>
+            <a class="limit_text">Be Limitless</a>
+            <a class="TY">Team Yoshi</a>
+            <a class="mood_text">Set the vibe:</a>
             <a class="lofi_text">Lofi</a>
             <a class="native_text">Native</a>
         </div>

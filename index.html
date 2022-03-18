@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Team Yoshi</title>
         <style>
             @import url(//fonts.googleapis.com/css?family=Lato:300:400);
-
-            body {
-              margin:0;
+            
+            * {
+                box-sizing: border-box;
             }
             
             h1 {
@@ -26,12 +27,11 @@
             }
             
             .header {
-              position:relative;
-              text-align:center;
+              position: relative;
+              text-align: center;
               background: linear-gradient(60deg, rgb(82, 0, 71) 0%, rgb(19, 0, 193) 100%);
-              color:white;
+              color:rgb(255, 255, 255);
             }
-
             
             .inner-header {
               height:65vh;
@@ -48,7 +48,7 @@
             }
             
             .waves {
-              position:relative;
+              position: relative;
               width: 100%;
               height:15vh;
               margin-bottom:-7px; /*Fix for safari gap*/
@@ -57,10 +57,10 @@
             }
             
             .content {
-              position:relative;
+              position: relative;
               height:20vh;
               text-align:center;
-              background-color: white;
+              background-color: rgb(50, 0, 85);
             }
             
             /* Animation */
@@ -106,7 +106,7 @@
               }
             }
 
-            #myBtn {
+            #btn {
                 width: 200px;
                 font-size: 18px;
                 padding: 10px;
@@ -116,18 +116,26 @@
                 cursor: pointer;
               }
               
-              #myBtn:hover {
+              #btn:hover {
                 background: #ddd;
                 color: black;
+              }
+
+              #lofi {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
               }
         </style>  
 </head>
   <body>
       <script>
-            var video = document.getElementById("myVideo");
-            var btn = document.getElementById("myBtn");
+            var video = document.getElementById("lofi");
+            var btn = document.getElementById("btn");
             
-            function myFunction() {
+            function play_pause() {
               if (video.paused) {
                 video.play();
                 btn.innerHTML = "Pause";
@@ -135,12 +143,13 @@
                 video.pause();
                 btn.innerHTML = "Play";
               }
-            
+            }
             </script>
-      <div class="mood">
-
-      </div>
       <div class="header">
+        <video autoplay loop id="lofi">
+            <source src="/media/lofi.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
         <div class="inner-header flex">
             <h1>Be Limitless</h1>
             </div>
@@ -153,10 +162,10 @@
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(50,0,85,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(50,0,85,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(50,0,85,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(50,0,85,1" />
             </g>
             </svg>
             </div>
@@ -164,7 +173,7 @@
             
             </div>
             <div class="content flex">
-                <button id="myBtn" onclick="myFunction()">Pause</button>
+                <button id="btn" onclick="play_pause()">Pause</button>
               </div>
   </body>
 </html>

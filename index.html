@@ -175,22 +175,22 @@
 </head>
   <body>
     <script>
-      document.getElementById("gameStart").addEventListener("click", function(){
-        var timeleft = 15;
-    
-        var downloadTimer = setInterval(function function1(){
-        document.getElementById("countdown").innerHTML = timeleft + 
-        "&nbsp"+"seconds remaining";
-    
-        timeleft -= 1;
-        if(timeleft <= 0){
-            clearInterval(downloadTimer);
-            document.getElementById("countdown").innerHTML = "Time is up!"
+      var timeleft = 15;
+      function sample() {
+      var downloadTimer = setInterval(function 
+         function1(){ 
+      document.getElementById("countdown").innerHTML = timeleft + "&nbsp"+"seconds remaining";
+      
+      timeleft -= 1;
+      if(timeleft <= 0){
+          clearInterval(downloadTimer);
+      
+      document.getElementById("countdown").innerHTML = "Time is up!"
         }
-        }, 1000);
-    
-        console.log(countdown);
-    }); 
+      }, 1000);
+      
+          console.log(countdown)
+      } 
     </script>
       <div class="header">
         <div class="inner-header flex">
@@ -233,8 +233,9 @@
 
         
         <div>
-          <div id= "countdown">15:00</div>
-          <button  id= "gameStart">Break</button>
+          <p id="countdown"></p>
+          <div id= "startButtons">
+              <button onclick="sample()" id= "gameStart">Get Going!</button>
         </div>
         </div>
 

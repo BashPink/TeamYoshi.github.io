@@ -175,11 +175,16 @@
 </head>
   <body>
     <script>
-      var timeleft = 900;
+      var mind = time % (60 * 60);
+      var min = Math.floor(mind / 60);
+         
+      var secd = mind % 60;
+      var sec = Math.ceil(secd);
+
       function break_15() {
       var downloadTimer = setInterval(function 
          function1(){ 
-      document.getElementById("countdown").innerHTML = timeleft + "&nbsp"+"seconds remaining";
+      document.getElementById("countdown").innerHTML = min + ":" + sec;
       
       timeleft -= 1;
       if(timeleft <= 0){

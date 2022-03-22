@@ -175,8 +175,8 @@
 </head>
   <body>
     <script>
-      var timeleft = 15;
-      function sample() {
+      var timeleft = 900;
+      function break_15() {
       var downloadTimer = setInterval(function 
          function1(){ 
       document.getElementById("countdown").innerHTML = timeleft + "&nbsp"+"seconds remaining";
@@ -185,7 +185,7 @@
       if(timeleft <= 0){
           clearInterval(downloadTimer);
       
-      document.getElementById("countdown").innerHTML = "Time is up!"
+      document.getElementById("countdown").innerHTML = "Break's over";
         }
       }, 1000);
       
@@ -234,8 +234,8 @@
         
         <div>
           <p id="countdown"></p>
-          <div id= "startButtons">
-              <button onclick="sample()" id= "gameStart">Get Going!</button>
+          <div id= "break_buttons">
+              <button onclick="break_15()" id= "break_start">Break</button>
         </div>
         </div>
 

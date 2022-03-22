@@ -207,6 +207,57 @@
         </style>  
 </head>
   <body>
+
+      <div class="header">
+        <div class="inner-header flex">
+            <h1>(^_^)</h1>
+            <a class="limit_text">Be Limitless</a>
+            <a class="TY">Team Yoshi</a>
+            <a class="mood_text">Set the vibe:</a>
+            <a class="lofi_text">Lofi</a>
+            <a class="native_text">Native Flute</a>
+        </div>
+            
+            <!--Waves Container-->
+              <div>
+              <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+              <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+              </defs>
+              <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(200,0,255,0.7" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(100,0,255,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(50,0,255,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(50,0,85,1" />
+              </g>
+              </svg>
+              </div>
+            <!--Waves end-->
+    
+            </div>
+          
+            <!--Video Containers-->
+            <div class="lofi">
+              <iframe width="310" height="150" allow="fullscreen" src="https://www.youtube.com/embed/n61ULEU7CO0?t=1&controls=1"></iframe>
+            </div>
+            <div class="native">
+              <iframe width="310" height="150" allow="fullscreen" src="https://www.youtube.com/embed/c5Sy-tODTJU?t=1&controls=1"></iframe>
+            </div>
+        <!---Footer Container-->
+        <div class="content flex">
+
+          <div class="timer">            <span class="timer__part timer__part--minutes">00</span>
+            <span class="timer__part">:</span>
+            <span class="timer__part timer__part--seconds">00</span>
+            <button type="button" class="timer__btn timer__btn--control timer__btn--start">
+              <span class="material-icons">play_arrow</span>
+            </button>
+            <button type="button" class="timer__btn timer__btn--reset">
+              <span class="material-icons">timer</span>
+            </button></div>
+
+        </div>
     <script>
       class Timer {
         constructor(root) {
@@ -303,56 +354,5 @@
         document.querySelector(".timer")
       );
     </script>
-      <div class="header">
-        <div class="inner-header flex">
-            <h1>(^_^)</h1>
-            <a class="limit_text">Be Limitless</a>
-            <a class="TY">Team Yoshi</a>
-            <a class="mood_text">Set the vibe:</a>
-            <a class="lofi_text">Lofi</a>
-            <a class="native_text">Native Flute</a>
-        </div>
-            
-            <!--Waves Container-->
-              <div>
-              <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-              <defs>
-              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-              </defs>
-              <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(200,0,255,0.7" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(100,0,255,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(50,0,255,0.3)" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(50,0,85,1" />
-              </g>
-              </svg>
-              </div>
-            <!--Waves end-->
-    
-            </div>
-          
-            <!--Video Containers-->
-            <div class="lofi">
-              <iframe width="310" height="150" allow="fullscreen" src="https://www.youtube.com/embed/n61ULEU7CO0?t=1&controls=1"></iframe>
-            </div>
-            <div class="native">
-              <iframe width="310" height="150" allow="fullscreen" src="https://www.youtube.com/embed/c5Sy-tODTJU?t=1&controls=1"></iframe>
-            </div>
-        <!---Footer Container-->
-        <div class="content flex">
-
-          <div class="timer">            <span class="timer__part timer__part--minutes">00</span>
-            <span class="timer__part">:</span>
-            <span class="timer__part timer__part--seconds">00</span>
-            <button type="button" class="timer__btn timer__btn--control timer__btn--start">
-              <span class="material-icons">play_arrow</span>
-            </button>
-            <button type="button" class="timer__btn timer__btn--reset">
-              <span class="material-icons">timer</span>
-            </button></div>
-
-        </div>
-
   </body>
 </html>

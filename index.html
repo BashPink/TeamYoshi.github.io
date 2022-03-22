@@ -174,6 +174,23 @@
         </style>  
 </head>
   <body>
+    <script>
+      const starting_minutes = 10;
+      let time = starting_minutes * 60;
+      const countdownEl = document.getElementById('countdown_10');
+      
+      setInterval(updateCountdown, 1000);
+
+      function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        countdownEl.textContent = `${minutes}:${seconds}`;
+        time--;
+      }
+    </script>
       <div class="header">
         <div class="inner-header flex">
             <h1>(^_^)</h1>
@@ -212,6 +229,13 @@
             </div>
         <!---Footer Container-->
         <div class="content flex">
+
+        
+        <div>
+          <p id="countdown_10">10:00</p>
+          <button onclick="updateCountdown()">Break</button>
         </div>
+        </div>
+
   </body>
 </html>

@@ -175,21 +175,22 @@
 </head>
   <body>
     <script>
-      const starting_minutes = 10;
-      let time = starting_minutes * 60;
-      const countdownEl = document.getElementById('countdown_10');
-      
-      setInterval(updateCountdown, 1000);
-
-      function updateCountdown() {
-        const minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        countdownEl.textContent = `${minutes}:${seconds}`;
-        time--;
-      }
+      document.getElementById("gameStart").addEventListener("click", function(){
+        var timeleft = 15;
+    
+        var downloadTimer = setInterval(function function1(){
+        document.getElementById("countdown").innerHTML = timeleft + 
+        "&nbsp"+"seconds remaining";
+    
+        timeleft -= 1;
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            document.getElementById("countdown").innerHTML = "Time is up!"
+        }
+        }, 1000);
+    
+        console.log(countdown);
+    }); 
     </script>
       <div class="header">
         <div class="inner-header flex">
@@ -232,8 +233,8 @@
 
         
         <div>
-          <p id="countdown_10">10:00</p>
-          <button onclick="updateCountdown()">Break</button>
+          <div id= "countdown"></div>
+          <button  id= "gameStart">Break</button>
         </div>
         </div>
 
